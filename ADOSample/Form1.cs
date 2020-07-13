@@ -14,5 +14,25 @@ namespace ADOSample {
         {
             InitializeComponent();
         }
+
+        private void memoTableBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        {
+            this.Validate();
+            this.memoTableBindingSource.EndEdit();
+            this.tableAdapterManager.UpdateAll(this.infosys202002DataSet);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+            
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.memoTableTableAdapter.Fill(this.infosys202002DataSet.memoTable);
+        }
     }
 }
